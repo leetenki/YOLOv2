@@ -27,8 +27,8 @@
 python download_images.py
 ```
 
-なお、恐竜や動物のアイコン等は<a href="http://putiya.com/html/animal/animal00.html">こちら</a>のフリー素材を使わせて頂きました。
-各種背景画像は<a href="http://www.priga.jp/05.html">こちら</a>のものを使いました。
+なお、恐竜や動物のアイコン等は<a href="http://putiya.com/html/animal/animal00.html">こちら</a>、
+各種背景画像は<a href="http://www.priga.jp/05.html">こちら</a>のフリー素材を使わせて頂きました。
 
 
 
