@@ -1,19 +1,23 @@
 # YOLOv2（Chainerバージョン）
-本稿は、YOLOv2の論文をChainer上で再現実装したものです。darknetオリジナルの学習済みパラメータファイルをchainerで読み込むためのパーサと、chainer上で完全にゼロからYOLOv2を訓練するための実装が含まれています。
+YOLOv2は、2016年12月25日時点の、速度、精度ともに世界最高のリアルタイム物体検出手法です。
+
+本リポジトリは、YOLOv2の論文をChainer上で再現実装したものです。darknetオリジナルの学習済みパラメータファイルをchainerで読み込むためのパーサと、chainer上でゼロからYOLOv2を訓練するための実装が含まれています。（YOLOv2のtiny版に関してはChainerで読み込む方法が<a href="http://qiita.com/ashitani/items/566cf9234682cb5f2d60">こちら</a>のPPAPの記事で紹介されています。今回は、Full Version のYOLOv2の読込みと、学習ともにChainer実装しています。）
 
 
-Joseph Redmonさんの論文はこちら：
 
-[You Only Look Once](https://arxiv.org/abs/1506.02640)
+Joseph Redmonさんの元論文はこちら：
 
-[YOLO9000: Better, Faster, Stronger](https://arxiv.org/abs/1612.08242)
+[YOLO9000: Better, Faster, Stronger](https://arxiv.org/abs/1612.08242) (2016/12/25)
 
 
-darknetのオリジナルはこちら：
+[You Only Look Once](https://arxiv.org/abs/1506.02640) 
+
+
+darknetのオリジナル実装はこちら：
 
 [darknet](http://pjreddie.com/)
 
-chainerでYOLOv2(tiny版のみ)の読み込む方法についてはこちら：
+chainerを使ったYOLOv2(tiny版)の読み込む方法についてはこちら：
 
 [YOLOv2でPPAP](http://qiita.com/ashitani/items/566cf9234682cb5f2d60)
 
@@ -36,48 +40,25 @@ chainerでYOLOv2(tiny版のみ)の読み込む方法についてはこちら：
 - CUDA V8.0
 
 
-## 訓練済みYOLOv2モデル(完全版)の実行
-darknetオリジナルの重みパラメータファイルをchainerで読み込んで実行するための手順です。<a href="http://qiita.com/ashitani/items/566cf9234682cb5f2d60">こちら</a>を参考にさせて頂きました。
 
-１、yolov2学習済みweightsファイルをダウンロードする。
+## YOLOv2の訓練済みモデル(完全版)実行手順
+darknetオリジナルの重みパラメータファイルをchainerで読み込んで実行するための手順です。
 
+<a href="./YOLOv2_execute.md">訓練済みYOLOの実行手順</a>
 
-```
-wget http://pjreddie.com/media/files/yolo.weights
-```
-
-２、以下のコマンドでweightsファイルをchainer用にパースする。
-
-```
-python yolov2_darknet_parser.py yolo.weights
-```
-
-３、以下のコマンドで好きな画像ファイルを指定して物体検出を行う。
-検出結果は`yolov2_result.jpg`に保存される。
-
-```
-python yolov2_darknet_predict.py data/people.png
-```
+こちらのページにまとめました。
 
 
-４、以下のコマンドで、カメラを起動しリアルタイム物体検出を行う。
-
-```
-python yolov2_darknet_camera.py 
-```
-
-
-## Chainer上でYOLOv2の訓練
-フリー素材の動物アイコンデータセットを使ったYOLOv2の訓練です。長くなるので、別ページにまとめました。
+## YOLOv2の訓練手順
+フリー素材の動物アイコンデータセットを使ったYOLOv2の訓練です。
 
 <a href="./YOLOv2_animal_train.md">YOLOv2を使った動物アイコンデータセットの訓練手順</a>
 
-こちらをご覧ください。
+こちらのページに手順をまとめました。
+
 
 
 ## YOLOv2の理論解説
-YOLOv2の論文及びdarknetオリジナルの実装についての解説です。こちらも長くなるので別ページにまとめました。
+YOLOv2の論文及びdarknetオリジナルの実装についての解説です。こちらも別ページにまとめました。
 
 <a href="./YOLOv2.md">YOLOv2の仕組み解説</a>
-
-こちらをご覧ください。

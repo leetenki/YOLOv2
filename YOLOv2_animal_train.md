@@ -1,8 +1,8 @@
 # YOLOv2による動物アイコン検出の訓練
 
-元ネタ:<a href="http://qiita.com/ashitani/items/566cf9234682cb5f2d60">YOLOv2でPPAP</a>
+参考記事:<a href="http://qiita.com/ashitani/items/566cf9234682cb5f2d60">YOLOv2でPPAP</a>
 
-上の記事では、darknetフレームワーク上でYOLOv2(tiny版のみ)を訓練し、訓練結果をchainerでロードする手法について書かれていました。本記事では、ゼロからchainer上でモデルを訓練する手法について説明します。
+上のPPAPの記事では、darknetフレームワーク上でYOLOv2(tiny版)を訓練し、訓練結果をchainerでロードする手法について書かれていました。本記事では、ゼロからchainer上でモデルを訓練する手法について説明します。
 
 
 <img src="data/animal_output.gif">
