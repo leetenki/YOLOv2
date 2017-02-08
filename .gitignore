@@ -1,0 +1,11 @@
+__pycache__/
+backup
+sample_images/*.jpg
+*result.jpg
+*.avi
+*.model
+*.mov
+*.weights
+items/*
+backgrounds/*
+assets/
